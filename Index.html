@@ -5,43 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 14</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-
-        const form = document.getElementById("formulario");
-        form.addEventListener("submit");
-        const mail = document.getElementById("email").value;
-        const reason = document.getElementById("reason").value;
-        const name = document.getElementById("name").value;
-        if (name || reason || email){
-            message.textContent = "Por favor complete todos los campos";
-            message.className = "error";
-            message.classList.remove("hidden");
-            return;
-        }
-        if(ValidateEmail (email)){
-            message.textContent = "por favor complete los campos";
-            message.className = "error";
-            message.classList.remove("hidden");
-            return;
-        } 
-        message.textContent = "Formulario enviado con exito";
-        message.className = "Exito";
-        message.classList.remove("hidden");
-
-        document.getElementById("formulario").reset();
-
-        function ValidateEmail(email) {
-            const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-            return emailRegex.test(email)
-        }
-
-
-
-        
-    </script>
+    
 
 
 </head>
+
+<body>
 <header id="main-header">
     <h1 class="header-title">Sobre Mí</h1>
 </header>
@@ -153,6 +122,39 @@
 
 
 
+        <script>
+
+            const form = document.getElementById("formulario");
+            form.addEventListener("submit");
+            const mail = document.getElementById("email").value;
+            const reason = document.getElementById("reason").value;
+            const name = document.getElementById("name").value;
+            if (name || reason || email){
+                message.textContent = "Por favor complete todos los campos";
+                message.className = "error";
+                message.classList.remove("hidden");
+                return;
+            }
+            if(ValidateEmail (email)){
+                message.textContent = "por favor complete los campos";
+                message.className = "error";
+                message.classList.remove("hidden");
+                return;
+            } 
+            message.textContent = "Formulario enviado con exito";
+            message.className = "Exito";
+            message.classList.remove("hidden");
     
+            document.getElementById("formulario").reset();
+    
+            function ValidateEmail(email) {
+                const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                return emailRegex.test(email)
+            }
+    
+    
+    
+            
+        </script>
 </body>
 </html>
